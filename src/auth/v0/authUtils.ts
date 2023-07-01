@@ -1,7 +1,7 @@
 import { Request } from 'express'
 import { decode, verify } from 'jsonwebtoken'
 import { JwtPayload, Jwt } from '../interfaces'
-import { config } from '../../config'
+import { config } from '../../aws.paramaters'
 import Axios from 'axios'
 
 export function getUserId(req: Request): string | undefined {

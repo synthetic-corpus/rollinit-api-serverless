@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 const cors = require('cors');
-import { config } from './config';
+import { config } from './aws.paramaters.js';
 import { Request, Response } from 'express';
 import { CampaignRouterV0 } from './01Http/v0/campaign.router';
 import { FeywildRouterV0 } from './01Http/v0/feywild.router';

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import {config} from '../../config'
+import {config} from '../../aws.paramaters'
 
 
 const uri = `${config.mongoPrefix}${config.mongoUser}:${config.mongoPass}@${config.mongoAddress}`
