@@ -1,8 +1,8 @@
 import {Router, Request, Response} from 'express';
-import { requireAuth } from '../../auth/v0/require.auth';
-import { CampaignHttp, CampaignPatch } from '../../interfaces/campaign.interface';
-import * as CampaignLogic from '../../02BusinessLogic/v0/campaign.logic'
-import { HttpReplyMessage } from '../../interfaces/responses.interface';
+import { requireAuth } from '../../auth/v0/require.auth.js';
+import { CampaignHttp, CampaignPatch } from '../../interfaces/campaign.interface.js';
+import * as CampaignLogic from '../../02BusinessLogic/v0/campaign.logic.js'
+import { HttpReplyMessage } from '../../interfaces/responses.interface.js';
 
 
 const router: Router = Router()

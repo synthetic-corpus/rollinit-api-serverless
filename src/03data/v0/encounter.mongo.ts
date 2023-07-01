@@ -1,6 +1,6 @@
-import { HttpReplyMessage } from '../../interfaces/responses.interface'
-import { EncounterModel } from './schemas/encounter.schema'
-import { EncounterPatch,Encounter } from '../../interfaces/encounter.interface'
+import { HttpReplyMessage } from '../../interfaces/responses.interface.js'
+import { EncounterModel } from './schemas/encounter.schema.js'
+import { EncounterPatch,Encounter } from '../../interfaces/encounter.interface.js'
 import { stringify } from 'querystring'
 
 export async function createEncounter(encounter: Encounter): Promise<HttpReplyMessage>{

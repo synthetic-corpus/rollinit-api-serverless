@@ -1,4 +1,4 @@
-import { UserModel } from "./schemas/schema";
+import { UserModel } from "./schemas/schema.js";
 
 export async function convertUserId(userId: String): Promise<string>{
     try{

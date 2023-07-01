@@ -1,7 +1,7 @@
-import  * as User from '../../interfaces/user.interface';
-import * as DB from '../../03data/v0/user.mongo';
-import { convertUserId } from '../../03data/v0/convertUserId';
-import { HttpReplyMessage } from '../../interfaces/responses.interface'
+import  * as User from '../../interfaces/user.interface.js';
+import * as DB from '../../03data/v0/user.mongo.js';
+import { convertUserId } from '../../03data/v0/convertUserId.js';
+import { HttpReplyMessage } from '../../interfaces/responses.interface.js'
 
 
 export async function createUser(userId: String, name: string): Promise<HttpReplyMessage>{

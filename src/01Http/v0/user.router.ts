@@ -1,10 +1,10 @@
 import {Router, Request, Response} from 'express';
-import { getUserId } from '../../auth/v0/authUtils';
-import * as UserLogic from '../../02BusinessLogic/v0/user.logic'
-import { HttpReplyMessage } from '../../interfaces/responses.interface';
+import { getUserId } from '../../auth/v0/authUtils.js';
+import * as UserLogic from '../../02BusinessLogic/v0/user.logic.js'
+import { HttpReplyMessage } from '../../interfaces/responses.interface.js';
 import { stringify } from 'querystring';
-import { requireAuth } from '../../auth/v0/require.auth';
-import { UserPatch,UserHttp } from '../../interfaces/user.interface';
+import { requireAuth } from '../../auth/v0/require.auth.js';
+import { UserPatch,UserHttp } from '../../interfaces/user.interface.js';
 
 const router: Router = Router()
 

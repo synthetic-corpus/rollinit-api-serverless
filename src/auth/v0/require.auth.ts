@@ -1,7 +1,7 @@
 import {Request, Response} from 'express'
 import {NextFunction} from 'connect'
-import { verifyToken, getUserId } from './authUtils'
-import { JwtPayload } from '../interfaces';
+import { verifyToken, getUserId } from './authUtils.js'
+import { JwtPayload } from '../interfaces.js';
 import { stringify } from 'querystring';
 
 

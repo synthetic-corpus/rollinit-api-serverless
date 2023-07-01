@@ -1,7 +1,7 @@
-import * as Campaign from '../../interfaces/campaign.interface';
-import * as DB from '../../03data/v0/campaign.mongo';
-import { convertUserId } from '../../03data/v0/convertUserId';
-import { HttpReplyMessage } from '../../interfaces/responses.interface'
+import * as Campaign from '../../interfaces/campaign.interface.js';
+import * as DB from '../../03data/v0/campaign.mongo.js';
+import { convertUserId } from '../../03data/v0/convertUserId.js';
+import { HttpReplyMessage } from '../../interfaces/responses.interface.js'
 
 
 export async function createCampaign(userId: String, campaignPost: Campaign.CampaignHttp): Promise<HttpReplyMessage>{
