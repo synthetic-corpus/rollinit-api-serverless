@@ -1,9 +1,11 @@
 import mongoose from 'mongoose'
-import {config} from '../../aws.paramaters.js'
-console.log(config)
+import { config } from '../../aws.params.js'
 
+const databaseName = 'Mongo Cloud Database'
 
 const uri = `${config.mongoPrefix}${config.mongoUser}:${config.mongoPass}@${config.mongoAddress}`
+const myDatabase= mongoose.connect(uri);
+    
 
-export const myDatabase= mongoose.connect(uri);
-export const databaseName: string = 'Mongo Cloud Database';
+
+export {myDatabase, databaseName}

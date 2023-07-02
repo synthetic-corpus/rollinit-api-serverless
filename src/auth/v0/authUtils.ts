@@ -1,11 +1,13 @@
 import { Request } from 'express'
 import * as jsonwbt from 'jsonwebtoken'
 import { JwtPayload, Jwt } from '../interfaces.js'
-import * as p from '../../aws.paramaters.js'
+import { config } from '../../aws.params.js'
 import Axios from 'axios'
+
 
 const decode = jsonwbt.decode
 const verify = jsonwbt.verify
+
 
 export function getUserId(req: Request): string | undefined {
     const authorization = req.headers.authorization as string
