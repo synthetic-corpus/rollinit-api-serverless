@@ -48,3 +48,4 @@ Thumbs.db
 /src/local_settings.ts
 basic-front/
 package-lock.json
+.webpack

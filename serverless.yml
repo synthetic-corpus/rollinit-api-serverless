@@ -1,0 +1,52 @@
+service: feywild-alpha-lambda
+frameworkVersion: '3'
+
+plugins:
+  - serverless-webpack
+  - serverless-iam-roles-per-function
+  - serverless-aws-documentation
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 8080
+  webpack:
+    webpackConfig: 'webpack.config.cjs'
+
+provider:
+  apiGateway:
+    shouldStartNameWithService: true
+
+  tracing:
+    lambda: true
+    apiGateway: true
+    
+  name: aws
+  runtime: nodejs16.x
+
+  stage: ${opt:stage, 'dev'}
+  region: ${opt:region,'us-west-2'}
+
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - codedeploy:*
+      Resource:
+        - '*'
+
+functions:
+  helloWorld:
+    handler: src/01Http/hellolambda.handler
+    events:
+      - http:
+          method: get
+          cors: true
+          path: hello
+  
+  helloAuth:
+    handler: src/01Http/helloauthlambda.handler
+    events:
+      - http:
+          method: get
+          cors: true
+          path: helloauth
