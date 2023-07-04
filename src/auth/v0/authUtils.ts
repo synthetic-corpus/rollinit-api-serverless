@@ -1,15 +1,16 @@
-import { Request } from 'express'
+
 import * as jsonwbt from 'jsonwebtoken'
 import { JwtPayload, Jwt } from '../interfaces.js'
 import { config } from '../../aws.params.js'
 import Axios from 'axios'
+import { APIGatewayEvent } from 'aws-lambda'
 
 
 const decode = jsonwbt.decode
 const verify = jsonwbt.verify
 
 
-export function getUserId(req: Request): string | undefined {
+export function getUserId(req: APIGatewayEvent): string | undefined {
     const authorization = req.headers.authorization as string
     if(authorization){
         console.log(authorization)
